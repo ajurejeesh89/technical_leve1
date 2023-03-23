@@ -36,7 +36,6 @@ const people = [
     },
 
 ]
-console.log("came");
 
 var countryName = []
 var submitForm = document.getElementById("submitForm");
@@ -61,12 +60,10 @@ submitForm.addEventListener("submit", (e) => {
         const dataArray = objectArray.country
         let i = 0;
         dataArray.map((obj) => {
-            console.log("its in dataarray came", dataArray);
             const displayName = obj.country_id + " - " + obj.probability
             document.getElementById('countryDetails').style.display = "inline-grid";
             document.getElementById('error').style.display = "none";
             let span = document.getElementsByClassName('item' + i);
-            console.log("span", span);
             txt = document.createTextNode(displayName);
             span[0].innerHTML = "";
             span[0].appendChild(txt);
@@ -80,6 +77,34 @@ submitForm.addEventListener("submit", (e) => {
     }
 
 });
+
+
+function clearText(){
+    let name = document.getElementById("name")
+    name.value=name.value.toLowerCase();
+    const objectArray = people.find(elem => elem.name === name.value);
+    if (objectArray) {
+
+         const dataArray = objectArray.country
+        let i = 0;
+        dataArray.map((obj) => {
+            const displayName = ""
+            document.getElementById('countryDetails').style.display = "inline-grid";
+            document.getElementById('error').style.display = "none";
+            let span = document.getElementsByClassName('item' + i);
+            txt = document.createTextNode(displayName);
+            span[0].innerHTML = "";
+            span[0].appendChild(txt);
+            i++;
+
+        })
+    }
+        document.getElementById("name").value= "";
+
+    }
+
+
+
 
 function lettersValidate(event) {
 
