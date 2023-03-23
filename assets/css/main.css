@@ -281,6 +281,9 @@ section {
   margin-top: 140px;
 }
 
+
+
+
 .blog .sidebar .search-form form {
   background: #fff;
   border: 1px solid rgba(27, 47, 69, 0.2);
@@ -289,15 +292,15 @@ section {
 
 }
 
-.blog .sidebar .search-form form input[type=search] {
+.blog .sidebar .search-form form input[type=text] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
   width: calc(100% - 40px);
- 
+  padding-left: 6px;
 }
 
-.blog .sidebar .search-form form input[type=search]:focus {
+.blog .sidebar .search-form form input[type=text]:focus {
   outline: none;
 }
 
@@ -325,6 +328,33 @@ section {
 .blog .sidebar .search-form form button:hover {
   background: rgba(86, 184, 230, 0.8);
 }
+
+
+.blog .sidebar .search-form form input[type=button] {
+  
+  border: 0;
+  background: none;
+
+    padding: 9px 10px;
+    margin: -4px;
+    background: #fff;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 0 3px 3px 0;
+    line-height: 0;
+    background-image:url("../img/x.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blog .sidebar .search-form form input[type=button] i  {
+  line-height: 0;
+}
+
+.blog .sidebar .search-form form input[type=button] :hover {
+  background: rgba(77, 235, 10, 0.8);
+}
+
 
 .blog .sidebar .categories ul {
   list-style: none;
@@ -479,3 +509,4 @@ section {
  .textError {
    font-size: 40px;
  }
+
