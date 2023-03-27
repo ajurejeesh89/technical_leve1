@@ -16,16 +16,9 @@ const Grid = ({ countryDetails }) => {
             {
                 countryData?.map((obj, index) => {
 
-                   // return numb.toString().split('.')[1].length;
-                    let prob =  parseFloat(obj.probability * 100).toFixed(1)+"%"
-                    //let  converString = prob.toString().split('.')[1].length;
-
-
-                    //`${parseFloat(num * 100).toFixed(2)}%`;
-                   // let probability = obj.probability * 100 
-                    //let fixedLength = probability.toFixed(1)
-                    return <div key={obj.country_id} className='item' style={{ background: colors[index] }}>
-                        {obj.probability ? obj.country_id + '-' + prob : ''}
+                   let probability =  parseFloat(obj.probability * 100).toFixed(1)+"%"
+                   return <div key={obj.country_id} className='item' style={{ background: colors[index] }}>
+                        {obj.probability ? obj.country_id + '-' + probability : ''}
                     </div>
                 })
             }
