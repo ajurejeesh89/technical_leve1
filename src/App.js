@@ -1,10 +1,12 @@
-import './App.css';
+import './index.css'
 import OurTeam from './pages/OurTeam';
 
 function App() {
 
    return (
-    <OurTeam/>
+ 
+ <OurTeam/>
+
 
   );
 }
